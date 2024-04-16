@@ -6,16 +6,12 @@ for x_cord in range(0, 1000):
 
 
 def turn_on(start, stop):
-    x_range = stop[0] - start[0]
-    y_range = stop[1] - stop[1]
     for x in range(start[0], stop[0] + 1):
         for y in range(start[1], stop[1] + 1):
             light_grid[(x, y)] += 1
 
 
 def turn_off(start, stop):
-    x_range = stop[0] - start[0]
-    y_range = stop[1] - stop[1]
     for x in range(start[0], stop[0] + 1):
         for y in range(start[1], stop[1] + 1):
             if light_grid[(x, y)] > 0:
@@ -23,8 +19,6 @@ def turn_off(start, stop):
 
 
 def toggle(start, stop):
-    x_range = stop[0] - start[0]
-    y_range = stop[1] - stop[1]
     for x in range(start[0], stop[0] + 1):
         for y in range(start[1], stop[1] + 1):
             light_grid[(x, y)] += 2
